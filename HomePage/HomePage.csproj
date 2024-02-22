@@ -188,6 +188,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\easymart.png" />
+    <Content Include="Images\easymart1.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />

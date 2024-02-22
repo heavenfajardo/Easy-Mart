@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, #292929, #292929);
         }
 
         .header {
@@ -22,16 +23,18 @@
             color: #fff;
             text-decoration: none;
             margin-right: 10px;
+            transition: color 0.3s ease; 
         }
 
         .header a:hover {
-            color: #f9bc42; /* Yellow color on hover */
+            color: #f9bc42; 
+            transform: translateY(-2px); 
         }
 
         .feature-photo {
             background-size: cover; 
             background-position: center;
-            height: calc(100vh - 40px); /* Adjusted height for header padding */
+            height: calc(100vh - 40px); 
             position: relative;
         }
 
@@ -60,8 +63,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 300px; 
-            padding: 20px;
+            width: 350px;
+            padding: 30px;
             background-color: rgba(0, 0, 0, 0.6); 
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
@@ -73,12 +76,12 @@
         }
 
         div {
-            margin-bottom: 10px;
+            margin-bottom: 15px; 
         }
 
         .textbox {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             box-sizing: border-box;
@@ -93,20 +96,69 @@
 
         .button {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: none;
             border-radius: 5px;
-            background-color: #f9bc42; /* Yellow button color */
-            color: #000; /* Text color */
+            background-color: #f9bc42; 
+            color: #000; 
             cursor: pointer;
+            transition: background-color 0.3s ease; 
         }
 
         .button:hover {
-            background-color: #d2a329; /* Darker yellow on hover */
+            background-color: #d88829;
         }
 
         .message {
             text-align: center;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .feature-photo {
+            animation: gradient-animation 10s infinite linear;
+        }
+
+        .additional-options {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .additional-options a {
+            color: #f9bc42;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .additional-options a:hover {
+            text-decoration: underline;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: #f9bc42; 
+        }
+
+        .forgot-password {
+            color: #f9bc42; 
+            margin-left: auto; 
+        }
+
+        .register-link {
+            text-align: center;
+            color: #f9bc42; 
         }
     </style>
 </head>
@@ -117,10 +169,6 @@
     </div>
     <div class="feature-photo">
         <div class="photos-container">
-            <img src="https://marketplace.canva.com/EAFlJp1LtVM/1/0/1131w/canva-black-white-funny-simple-restaurant-food-menu-QbaczxwDD1k.jpg" class="photo active" alt="Feature Photo 1" />
-            <img src="https://marketplace.canva.com/EAFrh_B7so0/1/0/1131w/canva-brown-modern-restaurant-food-menu-a4-document-8Pyr1Drh3jU.jpg" class="photo" alt="Feature Photo 2" />
-            <img src="https://marketplace.canva.com/EAFiZ-bv_D4/1/0/1600w/canva-black-and-orange-modern-delicious-food-menu-instagram-post-eXXSGB8332s.jpg" class="photo" alt="Feature Photo 3" />
-            <!-- Add more photos as needed -->
         </div>
         <form id="form1" runat="server">
             <div>
@@ -134,11 +182,21 @@
                 <div>
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password" CssClass="textbox"></asp:TextBox>
                 </div>
+                <div class="checkbox-container">
+                    <label for="rememberMe">Remember Me</label>
+                    <input type="checkbox" id="rememberMe" />
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
                 <div>
                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" CssClass="button" />
+                </div>
+                <div class="register-link">
+                    <a href="#">Don't have an account? Register here</a>
                 </div>
             </div>
         </form>
     </div>
-    <script>
-        
+</body>
+</html>
