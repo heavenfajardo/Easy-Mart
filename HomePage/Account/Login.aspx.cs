@@ -9,7 +9,7 @@ namespace HomePage.Account
         {
             if (!IsPostBack)
             {
-                
+                // Setting placeholders for textboxes
                 txtUsername.Attributes["placeholder"] = "Username";
                 txtPassword.Attributes["placeholder"] = "Password";
             }
@@ -17,8 +17,15 @@ namespace HomePage.Account
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-           
+            // Redirect to Home.aspx upon login button click
             Response.Redirect("Home.aspx");
         }
+        
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

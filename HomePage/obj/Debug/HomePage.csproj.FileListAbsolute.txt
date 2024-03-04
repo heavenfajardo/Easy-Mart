@@ -1,4 +1,3 @@
-C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\obj\Debug\HomePage.csprojResolveAssemblyReference.cache
 C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\bin\HomePage.dll
 C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\bin\HomePage.pdb
 C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\bin\Antlr3.Runtime.dll
@@ -28,3 +27,7 @@ C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\bin\DotNetOp
 C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\obj\Debug\HomePage.dll
 C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\obj\Debug\HomePage.pdb
+C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\bin\HomePage.dll.config
+C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\obj\Debug\HomePage.csproj.AssemblyReference.cache
+C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\obj\Debug\HomePage.csproj.CoreCompileInputs.cache
+C:\Users\Heaven Fajardo\OneDrive\Desktop\ASP .NET\HomePage\HomePage\obj\Debug\HomePage.csproj.Up2Date

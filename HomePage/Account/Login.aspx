@@ -1,16 +1,21 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="HomePage.Account.Login" %>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Login Page</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #292929, #292929);
-        }
+            background-image: url('../Images/login.jpg');
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+}
 
         .header {
             background-color: #333;
@@ -144,23 +149,12 @@
             text-decoration: underline;
         }
 
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            color: #f9bc42; 
-        }
-
-        .forgot-password {
-            color: #f9bc42; 
-            margin-left: auto; 
-        }
-
-        .register-link {
-            text-align: center;
-            color: #f9bc42; 
+        .forgot-password a,
+        .register-link a {
+            color: #d88829; /* Change color to #ffa31a */
         }
     </style>
+   
 </head>
 <body>
     <div class="header">
@@ -182,10 +176,6 @@
                 <div>
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password" CssClass="textbox"></asp:TextBox>
                 </div>
-                <div class="checkbox-container">
-                    <label for="rememberMe">Remember Me</label>
-                    <input type="checkbox" id="rememberMe" />
-                </div>
                 <div class="forgot-password">
                     <a href="#">Forgot Password?</a>
                 </div>
@@ -193,7 +183,7 @@
                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" CssClass="button" />
                 </div>
                 <div class="register-link">
-                    <a href="#">Don't have an account? Register here</a>
+                    <a href="#">Don't have an account?  Register here</a>
                 </div>
             </div>
         </form>

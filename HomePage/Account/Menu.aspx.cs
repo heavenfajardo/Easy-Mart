@@ -53,10 +53,15 @@ namespace HomePage
         {
           
             }
+        private void Checkout_Click()
+        {
+
+        }
+       
         }
     }
 
-    // Define a class for menu items
+    
     public class MenuItem
     {
         public string Name { get; set; }
