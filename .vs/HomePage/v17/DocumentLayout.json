@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|c:\\users\\heaven fajardo\\onedrive\\desktop\\asp .net\\homepage\\homepage\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|solutionrelative:homepage\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\homepage\\account\\menu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|solutionrelative:homepage\\account\\menu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\homepage\\account\\menu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|c:\\users\\heaven fajardo\\onedrive\\desktop\\asp .net\\homepage\\homepage\\account\\menu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|solutionrelative:homepage\\account\\menu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\homepage\\account\\profile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|solutionrelative:homepage\\account\\profile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\homepage\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|solutionrelative:homepage\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\homepage\\account\\menu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|solutionrelative:homepage\\account\\menu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8AD8FD4-F379-4C11-A3B4-78DCD75306E7}|HomePage\\HomePage.csproj|C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\homepage\\account\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Menu.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\HomePage\\Account\\Menu.aspx.cs",
               "RelativeDocumentMoniker": "HomePage\\Account\\Menu.aspx.cs",
@@ -47,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\HomePage\\Account\\Login.aspx",
               "RelativeDocumentMoniker": "HomePage\\Account\\Login.aspx",
@@ -55,12 +55,11 @@
               "RelativeToolTip": "HomePage\\Account\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-01T20:26:54.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-01T20:26:54.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Menu.aspx",
               "DocumentMoniker": "C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\HomePage\\Account\\Menu.aspx",
               "RelativeDocumentMoniker": "HomePage\\Account\\Menu.aspx",
@@ -68,11 +67,12 @@
               "RelativeToolTip": "HomePage\\Account\\Menu.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-01T18:10:50.828Z"
+              "WhenOpened": "2024-03-01T18:10:50.828Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Profile.aspx",
               "DocumentMoniker": "C:\\Users\\Heaven Fajardo\\OneDrive\\Desktop\\ASP .NET\\HomePage\\HomePage\\Account\\Profile.aspx",
               "RelativeDocumentMoniker": "HomePage\\Account\\Profile.aspx",
@@ -80,7 +80,8 @@
               "RelativeToolTip": "HomePage\\Account\\Profile.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-01T17:31:28.83Z"
+              "WhenOpened": "2024-03-01T17:31:28.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
