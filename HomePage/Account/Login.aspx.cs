@@ -9,15 +9,17 @@ namespace HomePage.Account
         {
             if (!IsPostBack)
             {
-                // Setting placeholders for textboxes
-                txtUsername.Attributes["placeholder"] = "Username";
-                txtPassword.Attributes["placeholder"] = "Password";
+                if (!string.IsNullOrEmpty(Request.QueryString["welcome"]))
+                {
+                    lblWelcomeMessage.Text = Request.QueryString["welcome"];
+                    lblWelcomeMessage.Visible = true;
+                }
             }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            // Redirect to Home.aspx upon login button click
+            Session["WelcomeMessage"] = "Welcome to EasyMart";
             Response.Redirect("Home.aspx");
         }
         

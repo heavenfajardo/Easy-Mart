@@ -4,8 +4,8 @@
     <head runat="server">
         <title>Shop</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
-             body {
+         <style>
+        body {
             font-family: Arial, sans-serif;
             background-color: #333;
             margin: 0;
@@ -14,24 +14,65 @@
             background-size: cover;
             background-position: center;
             height: 100vh;
-            position: relative; /* Added */
+            position: relative; 
         }
-        .card-img-top
-        {
+
+        .card-img-top {
             height: 200px;
             object-fit: cover;
         }
+
         .upper-left-button {
             position: absolute;
             top: 10px;
             left: 10px;
         }
+
         .upper-right-button {
             position: absolute;
             top: 10px;
             right: 10px;
         }
-        </style>
+
+        
+        .menu-tab {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000; 
+        }
+
+        .menu-tab ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-tab ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu-tab ul li:last-child {
+            margin-right: 0;
+        }
+
+        .menu-tab ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .menu-tab ul li a:hover {
+            color: #f9bc42; 
+        }
+    </style>
     </head>
     <body>
         <form id="form1" runat="server">

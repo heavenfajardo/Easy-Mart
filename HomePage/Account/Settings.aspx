@@ -7,15 +7,15 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #333; /* Black background */
-            color: #fff; /* White text */
+            background-color: #333; 
+            color: #fff; 
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 600px; /* Adjust width as needed */
-            margin: 50px auto; /* Center the container */
+            max-width: 600px;
+            margin: 50px auto; 
             padding: 20px;
             position: relative; 
         }
@@ -31,7 +31,7 @@
         .section h2 {
             margin-top: 0;
             margin-bottom: 20px;
-            color: #fff; /* White text */
+            color: #fff; 
             font-size: 24px;
             text-transform: uppercase;
             border-bottom: 2px solid #f9bc42; 
@@ -51,8 +51,8 @@
 
         .button {
             display: inline-block;
-            background-color: #f9bc42; /* Yellow button */
-            color: #000; /* Black text */
+            background-color: #f9bc42;
+            color: #000; 
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
@@ -63,7 +63,7 @@
         }
 
         .button:hover {
-            background-color: #d2a329; /* Darker yellow on hover */
+            background-color: #d2a329; 
         }
     </style>
 </head>
@@ -87,7 +87,7 @@
                 <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" OnClick="btnChangePassword_Click" CssClass="button" />
                 <!-- Back button -->
                 <asp:Button ID="btnBack" runat="server" Text="Back to Home" OnClick="btnBack_Click" CssClass="button" />
-                <!-- Add more settings options as needed -->
+                
             </div>
         </div>
     </form>

@@ -33,6 +33,12 @@ namespace HomePage
             TotalPriceLabel.Text = totalPrice.ToString("C");
         }
 
+        protected void PayGcashButton_Click(object sender, EventArgs e)
+        {
+           
+            Response.Redirect("Payment.aspx");
+        }
+
         private List<Product> RetrieveProductsFromQueryParameters()
         {
             string productNames = Request.QueryString["productName"];
@@ -283,6 +289,8 @@ namespace HomePage
                 default:
                     return ""; 
             }
+
+
         }
 
     }

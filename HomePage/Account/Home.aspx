@@ -1,4 +1,4 @@
-﻿   <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="HomePage.Home" %>
+﻿  <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="HomePage.Home" %>
 
 
 <!DOCTYPE html>
@@ -95,8 +95,8 @@
             <div class="section orders-section" onclick="viewOrders()">
                 <h2>Orders</h2>
             </div>
-            <div class="section ordershistory-section" onclick="viewOrdersHistory()">
-                <h2>Orders History</h2>
+            <div class="section payment-section" onclick="viewPayment()">
+                <h2>Payment</h2>
             </div>
             <div class="section settings-section" onclick="viewSettings()">
                 <h2>Settings</h2>
@@ -120,8 +120,8 @@
             window.location.href = "Orders.aspx";
         }
 
-        function viewOrdersHistory() {
-            window.location.href = "OrdersHistory.aspx";
+        function viewPayment() {
+            window.location.href = "Payment.aspx";
         }
 
         function viewSettings() {

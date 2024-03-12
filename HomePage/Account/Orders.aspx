@@ -70,6 +70,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
+            margin-right: 10px; 
         }
         .btn-view-menu:hover {
             background-color: #f9bc42;
@@ -88,6 +89,22 @@
         .btn-remove:hover {
             background-color: #ff6659;
         }
+        .btn-pay-gcash {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-pay-gcash:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -95,27 +112,26 @@
         <div class="container">
             <h1>Orders</h1>
             <div>
-               <asp:Repeater ID="ProductRepeater" runat="server">
-                <ItemTemplate>
-                    <div class="card mb-4">
-                        <asp:Image runat="server" CssClass="card-img-top" ImageUrl='<%# Eval("ImageUrl") %>' />
-                        <div class="card-body">
-                            <h5 class="card-title"><%# Eval("Name") %></h5>
-                            <p class="card-text">Price: <%# Eval("Price", "{0:C}") %></p>
-                            <p class="supplier">Supplier: <%# Eval("Supplier") %></p>
-                            <asp:Button ID="RemoveButton" runat="server" Text="Remove" CssClass="btn-remove" OnClick="RemoveButton_Click" />
+                <asp:Repeater ID="ProductRepeater" runat="server">
+                    <ItemTemplate>
+                        <div class="card mb-4">
+                            <asp:Image runat="server" CssClass="card-img-top" ImageUrl='<%# Eval("ImageUrl") %>' />
+                            <div class="card-body">
+                                <h5 class="card-title"><%# Eval("Name") %></h5>
+                                <p class="card-text">Price: <%# Eval("Price", "{0:C}") %></p>
+                                <p class="supplier">Supplier: <%# Eval("Supplier") %></p>
+                                <asp:Button ID="RemoveButton" runat="server" Text="Remove" CssClass="btn-remove" OnClick="RemoveButton_Click" />
+                            </div>
                         </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-
-
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
             <div>
                 <h2 class="total-price">Total Price: <asp:Label ID="TotalPriceLabel" runat="server"></asp:Label></h2>
             </div>
             <div>
                 <asp:Button ID="ViewMenuButton" runat="server" Text="View Menu" OnClick="ViewMenuButton_Click" CssClass="btn-view-menu" />
+                <asp:Button ID="PayGcashButton" runat="server" Text="Pay via Gcash" OnClick="PayGcashButton_Click" CssClass="btn-pay-gcash" />
             </div>
         </div>
     </form>

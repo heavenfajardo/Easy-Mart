@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-image: url('../Images/login.jpg');
-            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-size: contain; 
             background-position: center;
             height: 100vh;
             overflow: hidden;
@@ -151,7 +151,7 @@
 
         .forgot-password a,
         .register-link a {
-            color: #d88829; /* Change color to #ffa31a */
+            color: #d88829;
         }
     </style>
    
@@ -187,11 +187,12 @@
             </div>
             </div>
         </form>
-        <script>
-    function redirectToRegister() {
-        window.location.href = "Register.aspx";
-    }
-        </script>
     </div>
+    <asp:Label ID="lblWelcomeMessage" runat="server" CssClass="welcome-message" Visible="false"></asp:Label>
+    <script>
+        function redirectToRegister() {
+            window.location.href = "Register.aspx";
+        }
+    </script>
 </body>
 </html>
