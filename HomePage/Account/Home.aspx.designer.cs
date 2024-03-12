@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HomePage {
-    
-    
-    public partial class Home {
-        
+namespace HomePage
+{
+
+
+    public partial class Home
+    {
+
         /// <summary>
         /// Head1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace HomePage {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>

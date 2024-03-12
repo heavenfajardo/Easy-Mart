@@ -12,59 +12,34 @@ namespace HomePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                BindMenu();
-            }
+           
         }
 
         protected void AddToCart_Click(object sender, EventArgs e)
         {
-            // Retrieve the index of the selected menu item
-            int index = int.Parse(((Button)sender).CommandArgument);
+            Button button = (Button)sender;
+            string productName = button.CommandArgument;
 
-            // Retrieve the menu item from the list view data source
-            List<MenuItem> menuItems = (List<MenuItem>)Session["Menu"];
-            MenuItem selectedItem = menuItems[index];
-
-            // Add the selected menu item to the cart
-            List<MenuItem> cartItems;
-            if (Session["Cart"] != null)
-            {
-                cartItems = (List<MenuItem>)Session["Cart"];
-            }
-            else
-            {
-                cartItems = new List<MenuItem>();
-            }
-            cartItems.Add(selectedItem);
-            Session["Cart"] = cartItems;
-
-            // Refresh the cart display
-            BindCart();
+            // Redirect the user to the Orders.aspx page after adding the item to the cart
+             Response.Redirect($"Orders.aspx?productName={HttpUtility.UrlEncode(productName)}");
         }
 
-        private void BindMenu()
+        private void AddItemToCart()
         {
-           
+            // Add code to bind menu items here
         }
 
-        private void BindCart()
+        protected void redirectToOrders(object sender, EventArgs e)
         {
-          
-            }
-        private void Checkout_Click()
-        {
-
+            // Redirect the user to the orders page
+            
         }
-       
+
+        protected void btnViewCart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Orders.aspx");
         }
     }
+}
 
-    
-    public class MenuItem
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public double Price { get; set; }
-    }
+

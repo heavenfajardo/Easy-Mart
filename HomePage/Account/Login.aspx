@@ -182,11 +182,16 @@
                 <div>
                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" CssClass="button" />
                 </div>
-                <div class="register-link">
-                    <a href="#">Don't have an account?  Register here</a>
-                </div>
+               <div class="register-link">
+               <a href="#" onclick="redirectToRegister()">Don't have an account? Register here</a>
+            </div>
             </div>
         </form>
+        <script>
+    function redirectToRegister() {
+        window.location.href = "Register.aspx";
+    }
+        </script>
     </div>
 </body>
 </html>

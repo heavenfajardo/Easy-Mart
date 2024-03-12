@@ -1,11 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HomePage.Profile" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="HomePage.Account.Register" %>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Profile</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title></title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,6 +43,7 @@
             color: #fff;
             padding: 10px;
             margin-bottom: 20px;
+            width: calc(100% - 20px);
         }
         .form-control:focus {
             background-color: rgba(255, 255, 255, 0.4);
@@ -69,53 +67,44 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            
-            <div class="form-group text-center">
-                <label for="profile">Profile </label><br />
-                <asp:FileUpload ID="profilePicture" runat="server" CssClass="form-control-file" onchange="readURL(this)" /><br />
-                <asp:Image ID="imgProfile" runat="server" CssClass="profile-picture" />
-            </div>
-            
-            
             <div class="form-group">
-                <label for="txtName">Name</label>
-                <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="txtName">Full Name</label>
+                <asp:TextBox ID="txtName" runat="server" placeholder="Enter your full name" CssClass="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="txtAdd">Address</label>
+                <asp:TextBox ID="txtAdd" runat="server" placeholder="Enter your address" CssClass="form-control" required />
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div>
+                    <asp:RadioButton ID="RadioButton1" runat="server" CssClass="mr-2" Text="Male" GroupName="user" Required="true" />
+                    <asp:RadioButton ID="RadioButton2" runat="server" CssClass="mr-2" Text="Female" GroupName="user" Required="true" />
+                    <asp:RadioButton ID="RadioButton3" runat="server" CssClass="mr-2" Text="Others" GroupName="user" Required="true" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtPhone">Phone</label>
+                <asp:TextBox ID="txtPhone" runat="server" placeholder="+639" CssClass="form-control" required />
             </div>
             <div class="form-group">
                 <label for="txtEmail">Email</label>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" type="email" placeholder="example@example.com" CssClass="form-control" required />
             </div>
             <div class="form-group">
-                <label for="txtContact">Contact Number</label>
-                <asp:TextBox ID="txtContact" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="txtUser">Username</label>
+                <asp:TextBox ID="txtUser" runat="server" placeholder="Enter username" CssClass="form-control" required />
             </div>
             <div class="form-group">
-                <label for="txtAddress">Address</label>
-                <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="txtPass">Password</label>
+                <asp:TextBox ID="txtPass" runat="server" TextMode="Password" placeholder="*****" CssClass="form-control" required />
             </div>
-          
-            <div class="form-group">
-                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="btn btn-primary" />
-                <asp:Button ID="btnHome" runat="server" Text="Back" OnClick="btnHome_Click" CssClass="btn btn-primary float-right" />
-            </div>
-            <div> 
-                <asp:Label ID="lblMessage" runat="server" Visible="false" ForeColor="Red" CssClass="message"></asp:Label>
+            <div class="button-container">
+               <asp:Button ID="btnHome" runat="server" Text="Back" CssClass="btn btn-primary back-btn" OnClick="btnHome_Click" />
+                <asp:Button ID="btnReg" runat="server" Text="Register" OnClick="btnReg_Click" CssClass="btn btn-primary register-btn" />
             </div>
         </div>
     </form>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('#imgProfile').attr('src', e.target.result);
-                }
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
 </body>
 </html>

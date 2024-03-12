@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿   <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="HomePage.Home" %>
+
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Easy Mart</title>

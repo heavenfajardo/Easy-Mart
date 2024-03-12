@@ -132,6 +132,7 @@
     <Content Include="Account\Orders.aspx" />
     <Content Include="Account\OrdersHistory.aspx" />
     <Content Include="Account\Profile.aspx" />
+    <Content Include="Account\Register.aspx" />
     <Content Include="Account\Settings.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -191,12 +192,20 @@
     <Content Include="Images\accent.png" />
     <Content Include="Images\apple.jpg" />
     <Content Include="Images\bacon.jpg" />
+    <Content Include="Images\biscuit.jpeg" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\cookedham.jpg" />
     <Content Include="Images\easymart.png" />
     <Content Include="Images\easymart1.png" />
+    <Content Include="Images\flakesinoil.jpg" />
+    <Content Include="Images\gardenia.jpg" />
     <Content Include="Images\greenapple.jpg" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\hotdog.png" />
+    <Content Include="Images\kulafu.png" />
     <Content Include="Images\login.jpg" />
+    <Content Include="Images\mop.jpg" />
+    <Content Include="Images\nova.jpg" />
     <Content Include="Images\orange.jpg" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
@@ -209,10 +218,16 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\pileoffish.jpg" />
+    <Content Include="Images\primera.jpg" />
+    <Content Include="Images\redhorse.jpg" />
+    <Content Include="Images\sardines.jpg" />
+    <Content Include="Images\sauce.png" />
     <Content Include="Images\sausage.jpg" />
+    <Content Include="Images\skinless.png" />
     <Content Include="Images\spag.jpg" />
     <Content Include="Images\Steak.jpg" />
     <Content Include="Images\strawberry.jpg" />
+    <Content Include="Images\tanduay.jpg" />
     <Content Include="Images\watermelon.jpg" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
@@ -290,6 +305,13 @@
     </Compile>
     <Compile Include="Account\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
