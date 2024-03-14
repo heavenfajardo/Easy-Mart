@@ -8,52 +8,37 @@ using System.Web.UI.WebControls;
 
 namespace HomePage
 {
-    public partial class Payment : System.Web.UI.Page
+    public partial class Payment : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         protected void payButton_Click(object sender, EventArgs e)
         {
             string customerName = this.customerName.Text;
-            string gcashName = this.gcashName.Text;
-            string gcashNumber = this.gcashNumber.Text;
-            string contactNumber = this.contactNumber.Text;
-
-            decimal price;
-
-            if (!decimal.TryParse(this.price.Text, out price))
-            {
-               
-                return;
-            }
-
-            if (proofOfPayment.HasFile)
-            {
-                string fileName = Path.GetFileName(proofOfPayment.FileName);
-                string directoryPath = Server.MapPath("~/ProofOfPayments/");
-
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
-
-                string filePath = Path.Combine(directoryPath, fileName);
-                proofOfPayment.SaveAs(filePath);
-            }
-
-            
-            ScriptManager.RegisterStartupScript(this, GetType(), "PaymentAlert", "alert('Thank you for your payment. Please come again.');", true);
-
-        
-            Response.AddHeader("REFRESH", "3;URL=Home.aspx");
+            Response.Redirect("OrderConfirmation.aspx");
         }
 
-        protected void backButton_Click(object sender, EventArgs e)
+        private void ShowConfirmation(OrderDetails order)
         {
-            Response.Redirect("Home.aspx");
+            string confirmationMessage = $"Customer Name: {order.CustomerName}<br />";
+            confirmationMessage += $"Gcash Name: {order.GcashName}<br />";
+            confirmationMessage += $"Gcash Number: {order.GcashNumber}<br />";
+            confirmationMessage += $"Contact Number: {order.ContactNumber}<br />";
+            confirmationMessage += $"Price: {order.Price:C}<br />";
+            // Add other order details as needed
+
+            // You can use a Label control to display the message
+            confirmationLabel.Text = confirmationMessage;
+
+            // Optionally, you can hide the form elements after displaying the confirmation
+            containerDiv.Visible = false;
+        }
+        public class OrderDetails
+        {
+            public string CustomerName { get; set; }
+            public string GcashName { get; set; }
+            public string GcashNumber { get; set; }
+            public string ContactNumber { get; set; }
+            public decimal Price { get; set; }
+            // Add other order details as needed
         }
     }
 }

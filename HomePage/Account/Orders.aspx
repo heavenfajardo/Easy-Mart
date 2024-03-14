@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Orders</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -130,8 +131,9 @@
                 <h2 class="total-price">Total Price: <asp:Label ID="TotalPriceLabel" runat="server"></asp:Label></h2>
             </div>
             <div>
-                <asp:Button ID="ViewMenuButton" runat="server" Text="View Menu" OnClick="ViewMenuButton_Click" CssClass="btn-view-menu" />
+                <asp:Button ID="ViewMenuButton" runat="server" Text="View Menu" OnClick="ViewMenuButton_Click" CssClass="btn btn-view-menu" />
                 <asp:Button ID="PayGcashButton" runat="server" Text="Pay via Gcash" OnClick="PayGcashButton_Click" CssClass="btn-pay-gcash" />
+                <asp:Button ID="AddMoreProductsButton" runat="server" Text="Add More Products" OnClick="AddMoreProductsButton_Click" CssClass="btn btn-view-menu" />
             </div>
         </div>
     </form>

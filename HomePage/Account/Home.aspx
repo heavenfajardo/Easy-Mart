@@ -97,14 +97,21 @@
             </div>
             <div class="section payment-section" onclick="viewPayment()">
                 <h2>Payment</h2>
+             </div>
+            <div class="section mycart-section" onclick="viewMyCart()">
+                <h2>My Cart</h2>
             </div>
             <div class="section settings-section" onclick="viewSettings()">
                 <h2>Settings</h2>
             </div>
             <div class="section logout-section" onclick="logout()">
-                <h2>Log Out</h2>
+            <h2>Log Out</h2>
             </div>
         </div>
+
+        <div class="container">
+    <h1><asp:Label ID="lblUsername" runat="server"></asp:Label></h1>
+</div>
     </form>
 
     <script>
@@ -122,6 +129,10 @@
 
         function viewPayment() {
             window.location.href = "Payment.aspx";
+        }
+
+        function viewOrderHistory() {
+            windows.location.href = "MyCart.aspx";
         }
 
         function viewSettings() {

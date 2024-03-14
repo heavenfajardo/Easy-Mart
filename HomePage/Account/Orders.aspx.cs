@@ -20,22 +20,29 @@ namespace HomePage
 
         private void LoadOrders()
         {
-            List<Product> cartProducts = RetrieveProductsFromQueryParameters();
-            if (cartProducts == null)
+            List<Product> cartProducts = Session["CartProducts"] as List<Product>;
+
+            // Check if cartProducts is null or empty before binding
+            if (cartProducts != null && cartProducts.Count > 0)
             {
-                cartProducts = new List<Product>();
+                // Bind the cart products to the repeater control
+                ProductRepeater.DataSource = cartProducts;
+                ProductRepeater.DataBind();
+
+                // Calculate and display the total price
+                decimal totalPrice = CalculateTotalPrice(cartProducts);
+                TotalPriceLabel.Text = totalPrice.ToString("C");
             }
-
-            ProductRepeater.DataSource = cartProducts;
-            ProductRepeater.DataBind();
-
-            decimal totalPrice = CalculateTotalPrice(cartProducts);
-            TotalPriceLabel.Text = totalPrice.ToString("C");
+            else
+            {
+                // Display a message or handle the case where there are no products in the cart
+                // For example:
+                // TotalPriceLabel.Text = "Your cart is empty.";
+            }
         }
-
         protected void PayGcashButton_Click(object sender, EventArgs e)
         {
-           
+
             Response.Redirect("Payment.aspx");
         }
 
@@ -57,15 +64,21 @@ namespace HomePage
             return products;
         }
 
-        private Product GetProductDetailsByName(string productName)
+            private Product GetProductDetailsByName(string productName)
         {
             string imageUrl = GetImageUrlForProduct(productName);
             decimal price = GetPriceForProduct(productName);
             string supplier = GetSupplierForProduct(productName);
 
-            return new Product { Name = productName, Price = price, Supplier = supplier, ImageUrl = imageUrl };
+            // Initialize Product using the constructor
+            return new Product
+            {
+                Name = productName,
+                Price = price,
+                Supplier = supplier,
+                ImageUrl = imageUrl
+            };
         }
-
         private decimal CalculateTotalPrice(List<Product> products)
         {
             return products.Sum(p => p.Price);
@@ -107,7 +120,14 @@ namespace HomePage
             cartProducts.Add(product);
             Session["CartProducts"] = cartProducts;
 
+            // Redirect back to the Orders page
             Response.Redirect("Orders.aspx");
+        }
+
+
+        protected void AddMoreProductsButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Menu.aspx");
         }
 
         private string GetImageUrlForProduct(string productName)
@@ -287,7 +307,7 @@ namespace HomePage
                     return "Henri Store";
 
                 default:
-                    return ""; 
+                    return "";
             }
 
 

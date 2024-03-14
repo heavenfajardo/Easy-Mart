@@ -186,6 +186,10 @@
                <a href="#" onclick="redirectToRegister()">Don't have an account? Register here</a>
             </div>
             </div>
+
+            <asp:Label ID="lblUsername" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lblErrorMessage" runat="server" Text=""></asp:Label>
+
         </form>
     </div>
     <asp:Label ID="lblWelcomeMessage" runat="server" CssClass="welcome-message" Visible="false"></asp:Label>

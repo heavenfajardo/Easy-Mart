@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Web.UI;
 
 namespace HomePage.Account
@@ -7,27 +8,51 @@ namespace HomePage.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            // Check if user is already authenticated
+            if (Session["username"] != null)
             {
-                if (!string.IsNullOrEmpty(Request.QueryString["welcome"]))
-                {
-                    lblWelcomeMessage.Text = Request.QueryString["welcome"];
-                    lblWelcomeMessage.Visible = true;
-                }
+                string username = Session["username"].ToString();
+                lblUsername.Text = "Welcome, " + username + "!";
+                // Redirect to Home page if already logged in
+                Response.Redirect("Home.aspx");
             }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Session["WelcomeMessage"] = "Welcome to EasyMart";
-            Response.Redirect("Home.aspx");
+            // Authenticate user (placeholder logic)
+            bool isAuthenticated = AuthenticateUser(txtUsername.Text, txtPassword.Text);
+            if (isAuthenticated)
+            {
+                // Store username in session
+                Session["username"] = txtUsername.Text;
+                // Redirect to Home page
+                Response.Redirect("Home.aspx");
+            }
+            else
+            {
+                // Display error message or handle invalid login
+                lblErrorMessage.Text = "Invalid username or password.";
+            }
         }
-        
-        protected void btnRegister_Click(object sender, EventArgs e)
+
+        private bool AuthenticateUser(string username, string password)
         {
+            string connectionString = "Data Source=LAPTOP-PFFT1KR8\\SQLEXPRESS01;Initial Catalog=user_reg;Integrated Security=True";
 
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM [dbo].[users] WHERE [username] = @username AND [password] = @password";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+                con.Close();
+
+                return count > 0;
+            }
         }
-
-
     }
 }

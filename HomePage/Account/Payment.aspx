@@ -55,7 +55,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container">
+        <div class="container" runat="server" id="containerDiv">
             <h1>Payment</h1>
             <div class="form-group">
                 <label for="customerName">Customer Name</label>
@@ -81,11 +81,11 @@
                 <label for="proofOfPayment">Proof of Payment (Screenshot for Receipt)</label>
                 <asp:FileUpload ID="proofOfPayment" runat="server" CssClass="form-control" />
             </div>
-           <asp:Button ID="backButton" runat="server" Text="Back" CssClass="btn btn-secondary" OnClick="backButton_Click" />
+           <asp:Button ID="backButton" runat="server" Text="Back" CssClass="btn btn-secondary" OnClientClick="history.go(-1); return false;" />
             <asp:Button ID="payButton" runat="server" Text="Pay Now" CssClass="btn btn-primary ml-2" OnClick="payButton_Click" />
 
         </div>
     </form>
+    <asp:Label ID="confirmationLabel" runat="server" EnableViewState="false" Visible="false" />
 </body>
-
 </html>
